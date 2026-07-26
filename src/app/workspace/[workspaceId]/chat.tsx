@@ -13,7 +13,7 @@ export default function Chat({ workspaceId }: { workspaceId: string }) {
     const q = question
     setQuestion('')
 
-    const res = await fetch('http://localhost:8000/query', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/query`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ workspace_id: workspaceId, question: q }),

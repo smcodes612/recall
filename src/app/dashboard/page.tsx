@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import CreateWorkspace from './create-workspace'
+import CreateWorkspace from '../../components/create-workspace'
 import Link from 'next/link'
 
 export default async function Dashboard() {
